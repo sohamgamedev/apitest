@@ -1,4 +1,8 @@
 {
-  "sem":3,
-  "name":"Soham"
+  "batch-1":
+  {
+    "slot-1":"DS",
+    "slot-2":"DBMS",
+    "slot-3":"CN"
+  }
 }
