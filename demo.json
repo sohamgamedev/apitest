@@ -1,9 +1,43 @@
-{
-  "batch-1":
+[
+  {
+    "slot-1":"DS",
+    "slot-2":"CN",
+    "slot-3":"DS",
+    "slot-4":"SPORTS"
+  },
+  
+  {
+    "slot-1":"DS",
+    "slot-2":"DBMS",
+    "slot-3":"CN",
+    "slot-4":"OOP"
+  },
+
+  {
+    "slot-1":"DS",
+    "slot-2":"DBMS",
+    "slot-3":"CN",
+    "slot-4":"OOP"
+  },
+
+  {
+    "slot-1":"DS",
+    "slot-2":"DBMS",
+    "slot-3":"CN",
+    "slot-4":"OOP"
+  },
+
+  {
+    "slot-1":"DS",
+    "slot-2":"DBMS",
+    "slot-3":"CN",
+    "slot-4":"OOP"
+  },
+
   {
     "slot-1":"DS",
     "slot-2":"DBMS",
     "slot-3":"CN",
     "slot-4":"OOP"
   }
-}
+]
