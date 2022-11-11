@@ -1,35 +1,31 @@
-<html>
-    <head><meta http-equiv="Content-Type":"application/json"><head>
-
 <?php
-
-include 'DatabaseConfig.php' ;
-
-$json = file_get_contents('php://input');
-
-$_POST = json_decode($json);
-
-//echo $_POST;  
+    header('Content-Type: application/json');
+    include 'DatabaseConfig.php' ;
 
 
- $con = mysqli_connect($HostName,$HostUser,$HostPass,$DatabaseName);
-
- $name = $_POST['name'];
- $score = $_POST['score']
+    $con = mysqli_connect($HostName,$HostUser,$HostPass,$DatabaseName);
 
 
- $Sql_Query = "insert into game_test (Name, score) values ('$name', '$score')";
+    $Sql_Query = "select * from game_test";
 
- if(mysqli_query($con,$Sql_Query)){
+    if(mysqli_query($con,$Sql_Query)){
 
- echo 'Data Submit Successfully';
+    $result = mysqli_query($con,$Sql_Query);
 
- }
- else{
+    $json_array = array();
 
- echo 'Try Again';
+    while($row = mysqli_fetch_assoc($result))
+    {
+        $json_array[] = $row;
+    }
 
- }
- mysqli_close($con);
+    print_r($json_array);
+
+    }
+    else{
+
+    echo("Error description: Query not sent" );
+
+    }
+    mysqli_close($con);
 ?>
-</html>
